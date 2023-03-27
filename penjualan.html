@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Penjualan</title>
+  <style>
+		header {
+            padding: 5px;
+			      background-color: rgb(177, 19, 11);
+            text-align: center;
+            font-size: 15px;
+			      color: white;
+            width: 100%;
+            top: 0;
+		}
+    main {
+          margin-top: 50px;
+          color: black;
+          text-align: center;
+          font-size: 15px;
+    }
+    body {
+          padding: 0;
+          margin: 0;
+          background-color:rgb(227, 174, 174);
+			    font-family: 'Times New Roman';
+		}
+    footer {
+            padding: 5px;
+            background-color: rgb(192, 90, 90);
+            text-align: center;
+            font-size: 17px;
+			      color: rgb(177, 19, 11);
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		    <h1>Menu Penjualan</h1>
+	</header>
+			  <a href="index.html">Menu Utama</a><br>
+			  <a href="penjualan.html">Penjualan</a><br>
+			  <a href="tentang.html">Tentang Saya</a>
+	<main>
+       <form>
+        <label for="namaBarang">Nama Barang:</label>
+        <input type="text" id="namaBarang" name="namaBarang"><br><br>
+        <label for="hargaBarang">Harga Barang:</label>
+        <input type="number" id="hargaBarang" name="hargaBarang"><br><br>
+        <label for="jumlahBarang">Jumlah Barang:</label>
+        <input type="number" id="jumlahBarang" name="jumlahBarang"><br><br>
+        <input type="button" value="Hitung" onclick="hitungTotal()">
+      </form> 
+ <hr width="80%" color = "black"> <br>
+    
+     <!-- Output -->
+      <p>Nama Barang: <span id="outputNamaBarang"></span></p>
+      <p>Harga Barang: <span id="outputHargaBarang"></span></p>
+      <p>Jumlah Beli: <span id="outputJumlahBeli"></span></p>
+      <p>Total Bayar: <span id="outputTotalBayar"></span></p>
+  
+    <script>
+      function hitungTotal() {
+        var namaBarang = document.getElementById("namaBarang").value;
+        var hargaBarang = document.getElementById("hargaBarang").value;
+        var jumlahBarang = document.getElementById("jumlahBarang").value;
+        var totalBayar = hargaBarang * jumlahBarang;
+  
+        // Output
+        document.getElementById("outputNamaBarang").innerHTML = namaBarang;
+        document.getElementById("outputHargaBarang").innerHTML = hargaBarang;
+        document.getElementById("outputJumlahBeli").innerHTML = jumlahBarang;
+        document.getElementById("outputTotalBayar").innerHTML = totalBayar;
+      }
+    </script>
+	</main>
+  <footer>
+		<p>20101106022-SHOFYA GOMA-A</p>
+	</footer>
+</body>
+</html>
